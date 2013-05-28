@@ -3,6 +3,6 @@
 This is the blueprint application for
 Taboo Verbs: Edit your own paper for TO BE VERBS
 
-by (Derek Fidler and John Nuccio)
+by [Derek Fidler](http://derekfidler.com) and John Nuccio)
 
 
