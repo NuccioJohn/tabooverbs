@@ -1,4 +1,11 @@
 Tabooverbs::Application.routes.draw do
+  get 'workshop' => 'pages#workshop'
+  get 'whataretobeverbs' => 'pages#whataretobeverbs'
+  get 'listoftobeverbs' => 'pages#listoftobeverbs'
+
+  root :to => 'pages#home'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
