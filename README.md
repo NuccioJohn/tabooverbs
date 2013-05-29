@@ -1,8 +1,5 @@
 # Taboo Verbs
 
-This is the blueprint application for
-Taboo Verbs: Edit your own paper for TO BE VERBS
+Top Secret
 
-by [Derek Fidler](http://derekfidler.com) and John Nuccio)
-
-
+by [Derek Fidler](http://derekfidler.com) and John Nuccio
