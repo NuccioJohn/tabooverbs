@@ -1,25 +1,50 @@
 $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
+$btnPrimaryBackground: rgb(255, 110, 53);
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
 
 @import 'bootstrap';
 
-body {
-  padding-top:60px;
-}
+body { padding-top:80px; }
 
-@import 'bootstrap-responsive';
+.navbar .container {
+  border-bottom: 1px solid  #ccc;
+  box-shadow: inset 0 3px 0 white;
+}
 
 .navbar-inner {
   @include box-shadow(none !important);
   border: 0;
 }
 
-footer {
-  margin-top:50px;
-  color: $grayLight;
-  a {
-    color: $gray;
-  }
+.navbar .brand {
+  font-family: "Arvo", "Georgia", serif;
+  font-size: 2rem;
 }
+
+.navbar li { line-height: 60px; }
+
+.navbar .btn { margin-top: 15px; }
+
+section {
+  border-bottom: 1px solid  #ccc;
+  box-shadow: inset 0 3px 0 white;
+  margin: .5rem 0;
+  padding: 1rem;
+}
+
+#upload h1 {
+  font-size: 4rem;
+  text-align:center;
+  line-height: 5rem;
+  font-family: "Arvo", "Georgia", serif;
+}
+
+.btn-super {
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  margin:1.2rem 0;
+}
+

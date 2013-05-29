@@ -12,12 +12,16 @@
       <ul class="nav">
         <li><%= link_to "Taboo Verbs", root_path, class: "brand" %></li>
       </ul>
+      <ul class="inline pull-right">
+        <li><%= link_to "Upload Your Essay Now!", new_user_registration_path, class: "btn btn-primary" %></li>
+      </ul>
       <div class="nav-collapse collapse">
         <ul class="inline nav pull-right">
-          <li><%= link_to "What are Taboo Verbs?", whataretobeverbs_path %></li>
-          <li><%= link_to "Workshop", workshop_path %></li>
+          <li><%= link_to "Passive Voice Workshop", workshop_path %></li>
+          <li><%= link_to "Teachers", teachers_path %></li>
         </ul>
       </div>
+
     </div>
   </div>
 </nav>

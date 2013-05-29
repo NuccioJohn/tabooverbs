@@ -6,6 +6,7 @@ Tabooverbs::Application.routes.draw do
   get 'workshop' => 'pages#workshop'
   get 'whataretobeverbs' => 'pages#whataretobeverbs'
   get 'listoftobeverbs' => 'pages#listoftobeverbs'
+  get 'teachers' => 'pages#teachers'
 
   root :to => 'pages#home'
 
