@@ -4,8 +4,10 @@
             <p>
               <%= @essay.description %>
             </p>
-            <%= link_to 'Edit', edit_essay_path(@essay) %> |
-            <%= link_to 'Back', essays_path %>
+            <% if current_user == @essay.user %>
+	            <%= link_to 'Edit', edit_essay_path(@essay) %> |
+	            <%= link_to 'Back', essays_path %>
+            <% end %>
         </div>
     </div>
 </div>

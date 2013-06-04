@@ -1,8 +1,10 @@
 class EssaysController < ApplicationController
+  before_filter :authenticate_user!
+
   # GET /essays
   # GET /essays.json
   def index
-    @essays = Essay.all
+    @essays = current_user.essays.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +15,7 @@ class EssaysController < ApplicationController
   # GET /essays/1
   # GET /essays/1.json
   def show
-    @essay = Essay.find(params[:id])
+    @essay = current_user.essays.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +26,7 @@ class EssaysController < ApplicationController
   # GET /essays/new
   # GET /essays/new.json
   def new
-    @essay = Essay.new
+    @essay = current_user.essays.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +36,13 @@ class EssaysController < ApplicationController
 
   # GET /essays/1/edit
   def edit
-    @essay = Essay.find(params[:id])
+    @essay = current_user.essays.find(params[:id])
   end
 
   # POST /essays
   # POST /essays.json
   def create
-    @essay = Essay.new(params[:essay])
+    @essay = current_user.essays.new(params[:essay])
 
     respond_to do |format|
       if @essay.save
@@ -56,7 +58,7 @@ class EssaysController < ApplicationController
   # PUT /essays/1
   # PUT /essays/1.json
   def update
-    @essay = Essay.find(params[:id])
+    @essay = current_user.essays.find(params[:id])
 
     respond_to do |format|
       if @essay.update_attributes(params[:essay])
@@ -72,7 +74,7 @@ class EssaysController < ApplicationController
   # DELETE /essays/1
   # DELETE /essays/1.json
   def destroy
-    @essay = Essay.find(params[:id])
+    @essay = current_user.essays.find(params[:id])
     @essay.destroy
 
     respond_to do |format|

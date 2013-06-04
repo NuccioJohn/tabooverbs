@@ -4,6 +4,12 @@
   </small>
   <nav class="pull-right">
     <ul class="inline">
+    	     <% if user_signed_in? %>
+             <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+             <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+             <% else %>
+       		<li><%= link_to "Login", new_user_session_path %></li>
+          <% end %>
       <li><small><a href="#">Privacy Policy</a></small></li>
       <li><small><a href="#">About</a></small></li>
     </ul>
