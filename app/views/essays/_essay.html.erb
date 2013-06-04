@@ -1,0 +1,6 @@
+  <tr>
+    <td><%= essay.description %></td>
+    <td><%= link_to 'Show', essay %></td>
+    <td><%= link_to 'Edit', edit_essay_path(essay) %></td>
+    <td><%= link_to 'Destroy', essay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
