@@ -1,4 +1,7 @@
 Tabooverbs::Application.routes.draw do
+  resources :essays
+
+
   devise_for :views
 
   devise_for :users

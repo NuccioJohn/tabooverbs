@@ -1,0 +1,23 @@
+<h1>Listing essays</h1>
+
+<table>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @essays.each do |essay| %>
+  <tr>
+    <td><%= essay.description %></td>
+    <td><%= link_to 'Show', essay %></td>
+    <td><%= link_to 'Edit', edit_essay_path(essay) %></td>
+    <td><%= link_to 'Destroy', essay, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Essay', new_essay_path %>
